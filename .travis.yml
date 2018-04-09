@@ -41,13 +41,13 @@ before_script:
 services:
   - postgresql
 
-#env:
-#  - APP_DB_NAME=app_db
-#  - APP_DB_USERNAME=postgres
-#  - APP_DB_PASSWORD=
-#  - TEST_DB_NAME=app_db
-#  - TEST_DB_USERNAME=postgres
-#  - TEST_DB_PASSWORD=
+env:
+ - APP_DB_NAME=app_db
+ - APP_DB_USERNAME=postgres
+ - APP_DB_PASSWORD=
+ - TEST_DB_NAME=app_db
+ - TEST_DB_USERNAME=postgres
+ - TEST_DB_PASSWORD=
 
 # script always run to completion (set +e). All of these code checks are must haves
 # in a modern Go project.

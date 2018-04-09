@@ -12,7 +12,7 @@ import (
 
 	"github.com/gorilla/mux"
 	_ "github.com/lib/pq"
-	"pgmuxsem-master/model"
+	"github.com/hxline/pgmuxsem-master/model"
 )
 
 // App app.go

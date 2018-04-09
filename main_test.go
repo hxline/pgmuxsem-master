@@ -11,29 +11,29 @@ import (
 	"os"
 	"strconv"
 	"testing"
-	"pgmuxsem-master/service"
+	"github.com/hxline/pgmuxsem-master/service"
 )
 
 var a service.App
 
 //for local test without messing your environment variables
-const (
-	TEST_DB_HOST     = "10.17.50.48"
-	TEST_DB_PORT     = "5432"
-	TEST_DB_USERNAME = "postgres"
-	TEST_DB_PASSWORD = "postgres"
-	TEST_DB_NAME     = "hxline"
-)
+// const (
+// 	TEST_DB_HOST     = "10.17.50.48"
+// 	TEST_DB_PORT     = "5432"
+// 	TEST_DB_USERNAME = "postgres"
+// 	TEST_DB_PASSWORD = "postgres"
+// 	TEST_DB_NAME     = "hxline"
+// )
 
 
 func TestMain(m *testing.M) {
 	a = service.App{}
-	a.Initialize(TEST_DB_USERNAME, TEST_DB_PASSWORD, TEST_DB_NAME)
+	// a.Initialize(TEST_DB_USERNAME, TEST_DB_PASSWORD, TEST_DB_NAME)
 
-	// a.Initialize(
-	// 	os.Getenv("TEST_DB_USERNAME"),
-	// 	os.Getenv("TEST_DB_PASSWORD"),
-	// 	os.Getenv("TEST_DB_NAME"))
+	a.Initialize(
+		os.Getenv("TEST_DB_USERNAME"),
+		os.Getenv("TEST_DB_PASSWORD"),
+		os.Getenv("TEST_DB_NAME"))
 
 	ensureTableExists()
 
