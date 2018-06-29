@@ -31,7 +31,7 @@ func TestMain(m *testing.M) {
 	// a.Initialize(TEST_DB_USERNAME, TEST_DB_PASSWORD, TEST_DB_NAME)
 
 	a.Initialize(
-		os.Getenv("TEST_DB_USERNAME"),
+		os.Getenv("TEtST_DB_USERNAME"),
 		os.Getenv("TEST_DB_PASSWORD"),
 		os.Getenv("TEST_DB_NAME"))
 
