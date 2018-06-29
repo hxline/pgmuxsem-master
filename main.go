@@ -17,7 +17,7 @@ func main() {
 	// a.Initialize(TEST_DB_USERNAME, TEST_DB_PASSWORD, TEST_DB_NAME)
 
 	a.Initialize(
-		os.Getenv("APP_DB_USERNAME"),
+		os.Getenv("APPa_DB_USERNAME"),
 		os.Getenv("APP_DB_PASSWORD"),
 		os.Getenv("APP_DB_NAME"))
 
