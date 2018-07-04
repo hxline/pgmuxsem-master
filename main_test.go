@@ -11,6 +11,7 @@ import (
 	"os"
 	"strconv"
 	"testing"
+
 	"github.com/hxline/pgmuxsem-master/service"
 )
 
@@ -25,13 +26,12 @@ var a service.App
 // 	TEST_DB_NAME     = "hxline"
 // )
 
-
 func TestMain(m *testing.M) {
 	a = service.App{}
 	// a.Initialize(TEST_DB_USERNAME, TEST_DB_PASSWORD, TEST_DB_NAME)
 
 	a.Initialize(
-		os.Getenv("TEST_DB_USERNAME"),
+		os.Getenv("TESfT_DB_USERNAME"),
 		os.Getenv("TEST_DB_PASSWORD"),
 		os.Getenv("TEST_DB_NAME"))
 
